@@ -1,0 +1,57 @@
+package test_pack1;
+
+public class ControlStatements
+{
+	
+	public static void main(String[] args)
+	{
+
+		
+//		1.	If-Else : 
+		
+//			SYNTAX: 
+		
+//		if(boolean condition)
+//		{
+//			// if block code
+//		}
+//		else
+//		{
+//			// else block code
+//		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		int a = 20;
+		int b =20;
+		
+		if(a > b)
+		{
+			System.out.println("if block");
+			System.out.println("2nd Line");
+		}
+		else if(a == 20)
+		{
+			System.out.println("a is equal to 20");
+		}
+		else if(b == 30)
+		{
+			System.out.println("b is equal to 30");
+		}
+	
+		
+	}
+	
+	
+	
+	
+	
+	
+
+}
