@@ -8,7 +8,7 @@ public class ArrayDiscussion
 		
 		
 		
-//		SYNTAX: 
+//		SYNTAX:
 		
 //		DataType [] arrayName = {data1, data2, data3 ... data_n};
 		

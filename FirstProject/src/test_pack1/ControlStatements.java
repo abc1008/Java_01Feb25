@@ -47,6 +47,11 @@ public class ControlStatements
 		}
 	
 		
+		MethodCategories m = new MethodCategories();
+		m.addition(100, 200);
+		
+//		m.addition();
+		
 	}
 	
 	
