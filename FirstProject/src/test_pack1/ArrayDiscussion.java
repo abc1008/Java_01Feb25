@@ -6,6 +6,8 @@ public class ArrayDiscussion
 	public static void main(String[] args)
 	{
 		
+		
+		
 //		SYNTAX: 
 		
 //		DataType [] arrayName = {data1, data2, data3 ... data_n};
