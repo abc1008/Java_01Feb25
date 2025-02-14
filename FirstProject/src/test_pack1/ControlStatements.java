@@ -3,10 +3,14 @@ package test_pack1;
 public class ControlStatements
 {
 	
+	int abc = 200;  // non-static variable
+	
+	// 0 argument constructor with blank body
+	
 	public static void main(String[] args)
 	{
-
-		
+		ControlStatements cs = new ControlStatements();
+		System.out.println(cs.abc);
 		
 //		1.	If-Else : 
 		
