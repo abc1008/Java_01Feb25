@@ -10,6 +10,7 @@ public class Child2 extends Parent2
 	
 	public Child2(int i)
 	{
+		super(4);
 		System.out.println("Child2 Constructor");
 	}
 

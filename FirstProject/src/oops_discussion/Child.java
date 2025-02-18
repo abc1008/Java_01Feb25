@@ -1,5 +1,9 @@
 package oops_discussion;
 
+import access_modifiers.TestClass1;
+
+//import access_modifiers.TestClass1;
+
 public class Child extends Parent 
 {
 	int a = 1000;
@@ -25,12 +29,12 @@ public class Child extends Parent
 		
 		
 		
+		TestClass1 tc1 = new TestClass1();
 		
 		
+//		System.out.println(tc1.num1);
 		
-		
-		
-		
+//		tc1.m1();
 		
 		
 		
