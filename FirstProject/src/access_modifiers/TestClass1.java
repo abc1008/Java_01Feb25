@@ -14,6 +14,8 @@ public class TestClass1
 	public static void main(String[] args)
 	{
 
+		
+		ConstructorClass c1 = new ConstructorClass();
 	}
 
 }
