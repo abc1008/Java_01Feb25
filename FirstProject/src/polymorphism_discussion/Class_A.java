@@ -2,7 +2,11 @@ package polymorphism_discussion;
 
 public class Class_A
 {
-	public int m1()
+	
+	int num = 300;
+	
+	
+	final public int m1()
 	{
 		System.out.println("0 arg - m1");
 		
@@ -22,7 +26,7 @@ public class Class_A
 	
 	public static void m1(int a, char b)
 	{
-		System.out.println(" 2 arg (int char) m1");
+		System.out.println(" Parent - 2 arg (int char) m1");
 	}
 	
 	protected void m1(char b, int a)
