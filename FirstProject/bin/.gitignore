@@ -1,7 +1,9 @@
+/abstract_discussion/
+/access_modifiers/
+/interface_discussion/
 /oops_discussion/
+/polymorphism_discussion/
 /test/
 /test_pack1/
-/access_modifiers/
-/polymorphism_discussion/
-/abstract_discussion/
-/interface_discussion/
+/test_pack2/
+/encapsulation_discussion/

@@ -48,6 +48,7 @@ public class Class_A
 		
 		Class_A a1 = new Class_A();
 		a1.m1('j');
+
 		
 	}
 

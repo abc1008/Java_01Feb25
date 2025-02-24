@@ -13,11 +13,9 @@ public abstract class Class_1 implements Interface_1
 		System.out.println("Class_1 - m2 implementation");
 	}
 
-
 	public void m3()
 	{
 		System.out.println("Class_1 - m3 implementation");
 	}
-	
 
 }

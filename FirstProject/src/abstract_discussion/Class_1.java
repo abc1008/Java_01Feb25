@@ -3,10 +3,12 @@ package abstract_discussion;
 public abstract class Class_1
 {
 	
-	int a = 100;
+	int a = 100;    
 	static int b = 200;
 	
-	Class_1()
+	int num1 = 1000; 
+	
+	public Class_1()
 	{
 		System.out.println("Class_1 Constructor");
 	}
@@ -20,7 +22,7 @@ public abstract class Class_1
 	}
 	
 	
-	public abstract void m3(); 
+	abstract void m3(); 
 	
 	
 	public abstract void m4(); 

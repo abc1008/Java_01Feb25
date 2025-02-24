@@ -1,13 +1,20 @@
 package interface_discussion;
 
-interface Interface_1
+public interface Interface_1
 {
 
+	int num1 = 1000;  // public, static, final
+	
+	
 	void m1(); // by default public abstract
 
 	void m2();
 
 	void m3();
+	
+	
+	void m8();
+
 
 	public static void m4()
 	{

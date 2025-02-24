@@ -31,4 +31,11 @@ public class Class_2 extends Class_1
 		
 	}
 
+	@Override
+	public void m8()
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
 }
