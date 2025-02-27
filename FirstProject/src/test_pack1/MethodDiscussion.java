@@ -16,8 +16,8 @@ public class MethodDiscussion
 		System.out.println("Static method - method1 - MethodDiscussion");
 		System.out.println("Static method - method1 - MethodDiscussion");
 		
-//		MethodDiscussion ref2 = new MethodDiscussion();
-//		ref2.method2();
+		MethodDiscussion ref2 = new MethodDiscussion();
+		ref2.method2();
 		
 		
 	}
@@ -44,7 +44,7 @@ public class MethodDiscussion
 	
 	public static void main(String[] args)
 	{
-		
+		method1(); 
 		
 //		 METHOD CALLING :
 		
@@ -52,18 +52,18 @@ public class MethodDiscussion
 		
 //		SYNTAX:  methodName();
 		
-		method1(); 
+
 		
 		
 //		2. NON-STATIC 
 		
 //		Create Object and with the help of ref variable of object, we can call.
 		
-		MethodDiscussion ref1 = new MethodDiscussion(); // memory allocation
-		ref1.method2();
-		
-		
-		MethodDiscussion ref2 = new MethodDiscussion();
+//		MethodDiscussion ref1 = new MethodDiscussion(); // memory allocation
+//		ref1.method2();
+//		
+//		
+//		MethodDiscussion ref2 = new MethodDiscussion();
 		
 		
 	}
