@@ -11,5 +11,13 @@ interface Interface_2 extends Interface_1
 
 	void m8();
 	
+	
+	public static void main(String[] args)
+	{
+		
+
+		
+	}
+	
 
 }
