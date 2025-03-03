@@ -7,18 +7,16 @@ public class Class_2
 	{
 
 		String s1 = "Hello";  
-		
-		s1.concat(" World");
-		
-		System.out.println();
-		
-		s1 = "abc";
-		
-		String s6 = "Hello World";
+		System.out.println(s1 + " hashCode : "+s1.hashCode()); 
 		
 		
-		System.out.println("s1 refers to : "+ s1.concat(" World"));
-//		System.out.println("s3 refers to : "+ s3);
+		String s3 = s1.concat(" World");   // same as + operator
+		System.out.println(s3 + " hashCode : "+s3.hashCode()); 
+		
+		
+		s1 = "abc";  // new object 
+		System.out.println(s1 + " hashCode : "+s1.hashCode()); 
+		
 
 		
 		
