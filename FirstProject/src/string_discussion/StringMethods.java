@@ -109,6 +109,15 @@ public class StringMethods
 			System.out.println(s);
 		}
 		
+		StringBuilder s33 = new StringBuilder("abc");
+		
+		System.out.println(s33);
+		
+		s33.append(" pqr");
+		System.out.println(s33);
+		
+
+		
 	}
 
 }

@@ -14,6 +14,12 @@ public class MethodCategories
 	}
 	
 	
+	/**
+	 * Method to add 2 nums
+	 * @param num1
+	 * @param num2
+	 * @return int type of data afetr adding 2 nums
+	 */
 	public static int addition2(int num1, int num2)
 	{
 		
