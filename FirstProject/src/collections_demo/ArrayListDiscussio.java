@@ -22,7 +22,9 @@ public class ArrayListDiscussio
 		list1.add(300);
 		list1.add(200);
 		list1.add(500);
-		list1.add(600);
+		list1.add(null);
+		list1.add(700);
+		list1.add(null);
 		list1.add(700);
 		
 		
