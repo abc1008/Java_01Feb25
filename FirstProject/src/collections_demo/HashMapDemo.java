@@ -8,13 +8,11 @@ public class HashMapDemo
 
 	public static void main(String[] args)
 	{
-		
-		
+
 //		HashMap<Key_DataType, Value_DataType> mapName = new HashMap<Key_DataType, Value_DataType>();
-		
-		
 		HashMap<Integer, String> map1 = new HashMap<>();
 		
+
 //		insert
 		map1.put(100, "ABC");
 		map1.put(101, "PQR");
@@ -30,62 +28,57 @@ public class HashMapDemo
 		map1.put(102, "YUI");
 		map1.put(null, "YUI");
 		map1.put(null, "yuop");
-		
-		
-		
+
 		System.out.println(map1);
-		
+
 //		Data Fetch/get
-		
-		
-		
-		 String value = map1.get(100);
-		 System.out.println("value : " + value);
-		 
+
+		String value = map1.get(100);
+		System.out.println("value : " + value);
+
 //		 remove
-		 
-		 String removedValue = map1.remove(102);
-		 System.out.println("removedValue : " + removedValue);
-			System.out.println(map1);
-			
-			
+
+		String removedValue = map1.remove(102);
+		System.out.println("removedValue : " + removedValue);
+		System.out.println(map1);
+
 //			keyset
-			
+
 		Set<Integer> allKeys = map1.keySet();
-			
-			System.out.println(allKeys);
-			
-			System.out.println();
-			
-			for(Integer key : allKeys)
-			{
-				System.out.println(map1.get(key));
+
+		System.out.println(allKeys);
+
+		System.out.println();
+
+		
+		
+//		iterate over map
+		for (Integer key : allKeys)
+		{
+			System.out.println(map1.get(key));
 //				System.out.println(key);
-			}
-			
-			
+		}
+
+		
+		
+		
+		
+		
 //			containsKey and containsValue
-			
-			boolean containsKey = map1.containsKey(200);
-			System.out.println(containsKey);
-			
-			boolean containsValue = map1.containsValue("ABC");
-			System.out.println(containsValue);
-			
-			
-			map1.put(5, "XYZ");
-			System.out.println(map1);
-			
-			
+
+		boolean containsKey = map1.containsKey(200);
+		System.out.println(containsKey);
+
+		boolean containsValue = map1.containsValue("ABC");
+		System.out.println(containsValue);
+
+		map1.put(5, "XYZ");
+		System.out.println(map1);
+
 //			Size
-			
-			map1.size();
-			
+
+		map1.size();
+
 	}
-	
-	
-	
-	
-	
-	
+
 }
