@@ -12,9 +12,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class BrowserLaunch
 {
 	
-	public Claa_1 m1()
+	public Locators m1()
 	{
-		Claa_1 ref1 = new Claa_1();
+		Locators ref1 = new Locators();
 		
 		return ref1;
 	}
