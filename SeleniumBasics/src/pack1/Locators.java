@@ -27,14 +27,14 @@ public class Locators
 		driver.findElement(By.name("password")).sendKeys("Login@123");
 		
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//input[@value='Login']")).click();
+		driver.findElement(By.xpath("//input[@type='submit' and @value='Login']")).click();
 		
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//span[text()='My Account']")).click();
 		
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//a[text()='Logout']")).click();
-		
+//		driver.findElement(By.xpath("//a[text()='Logout']")).click();
+		driver.findElement(By.partialLinkText("Log")).click();
 		
 		
 		
