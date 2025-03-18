@@ -21,24 +21,26 @@ public class Checkbox
 		WebElement checkbox1 = driver.findElement(By.id("checkbox1"));
 
 //		perform scroll
+		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView();", checkbox1);
+//		js.executeScript("arguments[0].scrollIntoView();", checkbox1);
+		js.executeScript("arguments[0].click();", checkbox1);
 		
-		Thread.sleep(3000);
-		checkbox1.click();
+//		Thread.sleep(3000);
+//		checkbox1.click();
 		
-		Thread.sleep(3000);
-		boolean isChecked = driver.findElement(By.id("checkbox2")).isSelected();
-		
-		
-		if(isChecked == true)
-		{
-			System.out.println("Checkbox 2 is checked");
-		}
-		else
-		{
-			System.out.println("Checkbox 2 is unchecked");
-		}
+//		Thread.sleep(3000);
+//		boolean isChecked = driver.findElement(By.id("checkbox2")).isSelected();
+//		
+//		
+//		if(isChecked == true)
+//		{
+//			System.out.println("Checkbox 2 is checked");
+//		}
+//		else
+//		{
+//			System.out.println("Checkbox 2 is unchecked");
+//		}
 			
 		
 		

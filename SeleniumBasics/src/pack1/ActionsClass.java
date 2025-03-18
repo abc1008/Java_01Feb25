@@ -26,8 +26,9 @@ public class ActionsClass
 		
 		
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//a[text()='Show AllMP3 Players']")).click();
-		
+		WebElement showAll = driver.findElement(By.xpath("//a[text()='Show AllMP3 Players']"));
+		act.click(showAll).build().perform();  // -- normal click 
+
 		
 		
 	}
