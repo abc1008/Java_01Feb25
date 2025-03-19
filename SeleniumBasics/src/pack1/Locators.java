@@ -1,14 +1,21 @@
 package pack1;
 
+import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.google.common.io.Files;
+
 public class Locators
 {
 	
-	public static void main(String[] args) throws InterruptedException
+	public static void main(String[] args) throws InterruptedException, IOException
 	{
 		
 		WebDriver driver = new ChromeDriver();
@@ -22,6 +29,15 @@ public class Locators
 		
 		WebElement email = driver.findElement(By.id("input-email"));
 		email.sendKeys("ag89111@gmail.com");
+		
+		// screenshot
+		
+		TakesScreenshot screen = (TakesScreenshot)driver;
+		File screenShot = screen.getScreenshotAs(OutputType.FILE);
+		File file = new File("D:\\TRAININGS\\Selenium_JAVA_01FEB25_WEEKDAY_MORNING\\Screenshots\\testImage.png");
+		Files.copy(screenShot, file);
+		
+		
 		
 		Thread.sleep(3000);
 		driver.findElement(By.name("password")).sendKeys("Login@123");
@@ -38,7 +54,7 @@ public class Locators
 		
 		
 		
-		
+
 		
 	}
 
