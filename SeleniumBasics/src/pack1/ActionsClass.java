@@ -18,7 +18,6 @@ public class ActionsClass
 		
 		Thread.sleep(3000);
 		
-		
 		WebElement mp3 = driver.findElement(By.xpath("//a[text()='MP3 Players']"));
 		
 		Actions act = new Actions(driver);

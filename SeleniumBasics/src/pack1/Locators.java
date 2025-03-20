@@ -12,6 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.google.common.io.Files;
 
+import utility.CaptureScreen;
+
 public class Locators
 {
 	
@@ -31,11 +33,12 @@ public class Locators
 		email.sendKeys("ag89111@gmail.com");
 		
 		// screenshot
+//		TakesScreenshot screen = (TakesScreenshot)driver;  // 
+//		File screenShot = screen.getScreenshotAs(OutputType.FILE);
+//		File file = new File("D:\\TRAININGS\\Selenium_JAVA_01FEB25_WEEKDAY_MORNING\\Screenshots\\testImage.jpeg");
+//		Files.copy(screenShot, file);
 		
-		TakesScreenshot screen = (TakesScreenshot)driver;
-		File screenShot = screen.getScreenshotAs(OutputType.FILE);
-		File file = new File("D:\\TRAININGS\\Selenium_JAVA_01FEB25_WEEKDAY_MORNING\\Screenshots\\testImage.png");
-		Files.copy(screenShot, file);
+		
 		
 		
 		
@@ -53,8 +56,20 @@ public class Locators
 		driver.findElement(By.partialLinkText("Log")).click();
 		
 		
+		WebElement logoutMsg = driver.findElement(By.xpath("//div[@id='content']//h1"));
 		
-
+		if(logoutMsg.getText().equals("Account Logout"))
+		{
+			System.out.println("Logout Successful");
+		}
+		else
+		{
+			CaptureScreen.printScreen(driver, "abc");
+		}
+		
+		
+		
+		 
 		
 	}
 

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import utility.JSMethods;
+
 public class Checkbox
 {
 	
@@ -25,6 +27,8 @@ public class Checkbox
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 //		js.executeScript("arguments[0].scrollIntoView();", checkbox1);
 		js.executeScript("arguments[0].click();", checkbox1);
+		
+		JSMethods.scrollTo(driver, checkbox1);
 		
 //		Thread.sleep(3000);
 //		checkbox1.click();
