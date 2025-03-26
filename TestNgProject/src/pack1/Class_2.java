@@ -1,5 +1,6 @@
 package pack1;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -42,6 +43,27 @@ public class Class_2
 	public void m5()
 	{
 		System.out.println("m5");
+	}
+	
+	@Test
+	public void m6()
+	{
+		System.out.println("m6");
+		Assert.fail();
+	}
+	
+	
+	@Test
+	public void m7()
+	{
+		System.out.println("m7");
+	}
+	
+	
+	@Test
+	public void m8()
+	{
+		System.out.println("m8");
 	}
 	
 	
