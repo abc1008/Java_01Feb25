@@ -7,12 +7,14 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class Class_1
+//@Listeners(pack1.ListenerClass.class)
+public class ListenerTest
 {
-	final static int num = 20;
-
 	@BeforeClass
 	public void beforeClass()
 	{
@@ -30,19 +32,12 @@ public class Class_1
 	{
 		System.out.println("AfterClass");
 	}
-
-	@Test(priority = num, groups = "Regression")
-	public void m1()
-	{
-		System.out.println("m1");
-	}
 	
-	
-	@Test(priority = 0, groups = "Regression")
-	public void m2()
+	@Test
+	public void testCase1()
 	{
-		System.out.println("m2");
-		Assert.fail();
+		System.out.println("testCase1");
+//		Assert.fail();
 	}
 	
 	@BeforeMethod
@@ -57,12 +52,6 @@ public class Class_1
 		System.out.println("afterMethod");
 	}
 	
-
-	@Test(priority = -2, groups = "Sanity")
-	public void m3()
-	{
-		System.out.println("m3");
-	}
 	
 	@AfterTest
 	public void afterTest()
@@ -70,5 +59,19 @@ public class Class_1
 		System.out.println("afterTest");
 	}
 	
+	@BeforeTest
+	public void beforeTest()
+	{
+		System.out.println("beforeTest");
+	}
 	
+	
+	@BeforeSuite
+	public void BeforeSuite()
+	{
+		System.out.println("BeforeSuite");
+	}
+	
+
+
 }

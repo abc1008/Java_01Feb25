@@ -23,7 +23,6 @@ public class Class_2
 	{
 		System.out.println("beforeTest");
 	}
-	
 
 	
 	@AfterMethod
@@ -33,34 +32,36 @@ public class Class_2
 	}
 	
 	
-	@Test
+	@Test(dependsOnMethods = {"m5", "m6"}, groups = "Sanity")
 	public void m4()
 	{
 		System.out.println("m4");
 	}
 	
-	@Test
+	@Test(groups = "Regression", priority = -6)
 	public void m5()
 	{
 		System.out.println("m5");
+		Assert.fail();
+
 	}
 	
-	@Test
+	@Test(groups = "Sanity", priority = -7)
 	public void m6()
 	{
 		System.out.println("m6");
-		Assert.fail();
+
 	}
 	
 	
-	@Test
+	@Test(groups = "Regression")
 	public void m7()
 	{
 		System.out.println("m7");
 	}
 	
 	
-	@Test
+	@Test(groups = "Sanity")
 	public void m8()
 	{
 		System.out.println("m8");
