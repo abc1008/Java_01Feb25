@@ -3,17 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pack1.Class_1">
+      <class name="pack1.SeleniumLogin">
         <methods>
-          <include name="AfterSuite"/>
-          <include name="afterMethod"/>
-          <include name="afterTest"/>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="m3"/>
+          <include name="testCase"/>
+          <include name="launchBrowser"/>
+          <include name="login"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- pack1.Class_1 -->
+      </class> <!-- pack1.SeleniumLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
