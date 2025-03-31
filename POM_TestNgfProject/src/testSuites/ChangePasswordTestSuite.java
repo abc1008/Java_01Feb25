@@ -2,13 +2,17 @@ package testSuites;
 
 import org.testng.annotations.Test;
 
-public class ChangePasswordTestSuite
+import basePack.BaseClass;
+import testScripts.ChangePasswordTestScript;
+
+public class ChangePasswordTestSuite extends BaseClass
 {
 
 	@Test
-	public void test1()
+	public void tc123_ChangePasswordTest()
 	{
-		
+		ChangePasswordTestScript changePasswordTestScript = new ChangePasswordTestScript();
+		changePasswordTestScript.performChangePassword();
 	}
 	
 	

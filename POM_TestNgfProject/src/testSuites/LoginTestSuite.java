@@ -15,23 +15,5 @@ public class LoginTestSuite extends BaseClass
 		loginTestScripts.performLogin();
 	}
 	
-	
-	@Test
-	public void tc1234_LoginTest() throws InterruptedException
-	{
-		LoginTestScripts loginTestScripts = new  LoginTestScripts();
-		loginTestScripts.performLogin();
-	}
-	
-	
-	
-	@Test
-	public void tc1235_LoginTest() throws InterruptedException
-	{
-		LoginTestScripts loginTestScripts = new  LoginTestScripts();
-		loginTestScripts.performLogin();
-	}
-	
-
 
 }
