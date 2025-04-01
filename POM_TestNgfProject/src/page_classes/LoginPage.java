@@ -33,11 +33,22 @@ public class LoginPage
 	// public methods
 	public void login() throws InterruptedException
 	{
-		textBoxEmail.sendKeys("adityaganjkar88@gmail.com");
-		textBoxPassword.sendKeys("abcd@1234");
-		buttonLogin.click();
+		try
+		{
+			textBoxEmail.sendKeys("adityaganjkar88@gmail.com");
+			textBoxPassword.sendKeys("abcd@1234");
+			buttonLogin.click();
+			
+		} 
+		catch (Exception ex)
+		{
+			System.out.println("Exception in method : login " + ex.getMessage());
+			ex.printStackTrace();
+		}		
 		
-		Thread.sleep(3000);
+		
+		
+
 	}
 	
 

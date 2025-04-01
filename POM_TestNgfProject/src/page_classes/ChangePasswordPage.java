@@ -1,6 +1,7 @@
 package page_classes;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,8 @@ import org.openqa.selenium.support.decorators.WebDriverDecorator;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utility.ExplicitWait;
+
 public class ChangePasswordPage
 {
 	WebDriver driver;
@@ -18,7 +21,7 @@ public class ChangePasswordPage
 	private final String textBoxPasswordByXpath = "//input[@name='password']";
 	private final String textBoxConfirmPasswordByXpath = "//input[@name='confirm_pass']";
 	private final String buttonUpdateByXpath = "//button[text()='Update']";
-	private final String successMsgByXpath = "//span[text()='Success!']";
+	private final String successMsgByXpath = "//span[text()='Success!";
 	
 	@FindBy(xpath = textBoxPasswordByXpath) // to locate the webelements from UI
 	private WebElement textBoxPassword;
@@ -30,7 +33,7 @@ public class ChangePasswordPage
 	private WebElement buttonUpdate;
 	
 	@FindBy(xpath = successMsgByXpath) 
-	private WebElement successMsg;
+	private List<WebElement> successMsg;
 	
 	
 	// constructor
@@ -41,23 +44,37 @@ public class ChangePasswordPage
 	}
 	
 	// public methods
-	public void changePassword() 
+	public boolean changePassword() 
 	{
-		textBoxPassword.sendKeys("abcd@1234");
-		textBoxConfirmPassword.sendKeys("abcd@1234");
-		buttonUpdate.click();
+		boolean testResult = false;
 		
-		if(successMsg.isDisplayed() == true)
+		try
 		{
-			System.out.println("Password changed successfully");
+			textBoxPassword.sendKeys("abcd@1234");
+			textBoxConfirmPassword.sendKeys("abcd@1234");
+			buttonUpdate.click();
+			
+			if(successMsg.size() > 0)
+			{
+				System.out.println("Password changed successfully");
+				testResult = true;
+			}
+			else
+			{
+				System.out.println("Password change failed.");
+			}
+
+			ExplicitWait.waitUntilElementInvisible(driver, successMsg.get(0));
 		}
-		else
+		catch (Exception ex) 
 		{
-			System.out.println("Password changed failed.");
+			System.out.println("Exception in method : changePassword "+ex.getMessage());
+			ex.printStackTrace();
 		}
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.invisibilityOf(successMsg));
+	
+		
+		return testResult;
 	
 	}
 	
