@@ -1,15 +1,18 @@
 package testScripts;
 
+import java.io.IOException;
+
 import basePack.BaseClass;
 import page_classes.ChangePasswordPage;
 import page_classes.DashBoardPage;
 import page_classes.HeaderPage;
+import utility.ExtentReportHelper;
 import utility.TestometerApp;
 
 public class ChangePasswordTestScript extends BaseClass
 {
 
-	public boolean performChangePassword()
+	public boolean performChangePassword() throws IOException
 	{
 		boolean testResult = false;
 
@@ -21,23 +24,22 @@ public class ChangePasswordTestScript extends BaseClass
 				{
 					if (TestometerApp.changePasswordPage().changePassword() == true)
 					{
-						System.out.println("Successfully changed password.");
+						ExtentReportHelper.logPass("Successfully changed password.");
 						testResult = true;
 					}
 				} 
 				else
 				{
-					System.out.println("Failed to select Change Password option.");
+					ExtentReportHelper.logFail("Failed to select Change Password option.");
 				}
 			} 
 			else
 			{
-				System.out.println("Failed to click on New Version");
+				ExtentReportHelper.logFail("Failed to click on New Version");
 			}
 		} catch (Exception ex)
 		{
-			System.out.println("Exception in method : clickNewVersion " + ex.getMessage());
-			ex.printStackTrace();
+			ExtentReportHelper.logFail("Exception in method : clickNewVersion " + ex.getMessage());
 		}
 
 		return testResult;

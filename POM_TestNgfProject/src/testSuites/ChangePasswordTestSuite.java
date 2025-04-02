@@ -1,5 +1,7 @@
 package testSuites;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,7 +12,7 @@ public class ChangePasswordTestSuite extends BaseClass
 {
 
 	@Test
-	public void tc123_ChangePasswordTest()
+	public void tc123_ChangePasswordTest() throws IOException
 	{
 		Assert.assertTrue(new ChangePasswordTestScript().performChangePassword());
 		

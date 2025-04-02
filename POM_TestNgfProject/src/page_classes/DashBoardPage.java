@@ -1,11 +1,15 @@
 package page_classes;
 
+import java.io.IOException;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utility.ExplicitWait;
+import utility.ExtentReportHelper;
 
 public class DashBoardPage
 {
@@ -13,10 +17,14 @@ public class DashBoardPage
 	
 	// private variables
 	private final String buttonNewVersionByXpath = "//b[text()='New Version']";
+	private final String buttonProfileIconByXpath = "//button[@id='page-header-user-dropdown']";
 	
 	
 	@FindBy(xpath = buttonNewVersionByXpath) 
 	private WebElement buttonNewVersion;
+	
+	@FindBy(xpath = buttonProfileIconByXpath) 
+	private List<WebElement> buttonProfileIcon;
 	
 	
 	// constructor
@@ -28,7 +36,7 @@ public class DashBoardPage
 	
 	
 	// public methods
-	public boolean clickNewVersion()
+	public boolean clickNewVersion() throws IOException
 	{
 		boolean testResult = false;
 		
@@ -36,23 +44,22 @@ public class DashBoardPage
 		{
 			buttonNewVersion.click();
 			
-			boolean result = ExplicitWait.waitUntilElementInvisible(driver, buttonNewVersion);
+//			boolean result = ExplicitWait.waitUntilElementInvisible(driver, buttonNewVersion);
 			
-			if(result == true)
+			if(buttonProfileIcon.size() > 0)
 			{
-				System.out.println("Clicked on New Version button");
+				ExtentReportHelper.logPass("Clicked on New Version button");
 				testResult = true;
 			}
 			else
 			{
-				System.out.println("Failed to clicked on New Version button");
+				ExtentReportHelper.logFail("Failed to clicked on New Version button");
 			}
 			
 		}
 		catch (Exception ex) 
 		{
-			System.out.println("Exception in method : clickNewVersion "+ex.getMessage());
-			ex.printStackTrace();
+			ExtentReportHelper.logFail("Exception in method : clickNewVersion "+ex.getMessage());
 		}
 
 		return testResult;

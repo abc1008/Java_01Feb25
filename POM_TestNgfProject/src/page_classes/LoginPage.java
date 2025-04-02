@@ -1,9 +1,14 @@
 package page_classes;
 
+import java.io.IOException;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import utility.ExtentReportHelper;
 
 public class LoginPage
 {
@@ -12,6 +17,7 @@ public class LoginPage
 	private final String textBoxEmailByXpath = "//input[@placeholder='Email']";
 	private final String textBoxPasswordByXpath = "//input[@placeholder='Password']";
 	private final String buttonLoginByXpath = "//button[@type='submit']";
+	private final String buttonNewVersionByXpath = "//b[text()='New Version']";
 	
 	@FindBy(xpath = textBoxEmailByXpath) // to locate the webelements from UI
 	private WebElement textBoxEmail;
@@ -22,6 +28,9 @@ public class LoginPage
 	@FindBy(xpath = buttonLoginByXpath) 
 	private WebElement buttonLogin;
 	
+	@FindBy(xpath = buttonNewVersionByXpath) 
+	private List<WebElement> buttonNewVersion;
+	
 	
 	// constructor
 	public LoginPage(WebDriver driver)
@@ -31,19 +40,33 @@ public class LoginPage
 	
 	
 	// public methods
-	public void login() throws InterruptedException
+	public boolean login() throws InterruptedException, IOException
 	{
+		boolean testResult = false;
 		try
 		{
 			textBoxEmail.sendKeys("adityaganjkar88@gmail.com");
 			textBoxPassword.sendKeys("abcd@1234");
 			buttonLogin.click();
 			
+			if(buttonNewVersion.size() > 0)
+			{
+				ExtentReportHelper.logPass("Login Successful.");
+				testResult = true;
+			}
+			else
+			{
+				ExtentReportHelper.logFail("Login Failed.");
+				testResult = false;
+			}
+			
+			return testResult;
+			
 		} 
 		catch (Exception ex)
 		{
-			System.out.println("Exception in method : login " + ex.getMessage());
-			ex.printStackTrace();
+			ExtentReportHelper.logFail("Exception in method : login " + ex.getMessage());
+			return false;
 		}		
 		
 		

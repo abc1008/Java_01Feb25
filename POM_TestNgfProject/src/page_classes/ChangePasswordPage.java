@@ -1,5 +1,6 @@
 package page_classes;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utility.ExplicitWait;
+import utility.ExtentReportHelper;
 
 public class ChangePasswordPage
 {
@@ -44,7 +46,7 @@ public class ChangePasswordPage
 	}
 	
 	// public methods
-	public boolean changePassword() 
+	public boolean changePassword() throws IOException 
 	{
 		boolean testResult = false;
 		
@@ -56,20 +58,20 @@ public class ChangePasswordPage
 			
 			if(successMsg.size() > 0)
 			{
-				System.out.println("Password changed successfully");
+				ExtentReportHelper.logPass("Password changed successfully");
 				testResult = true;
 			}
 			else
 			{
-				System.out.println("Password change failed.");
+				ExtentReportHelper.logFail("Password change failed.");
 			}
 
 			ExplicitWait.waitUntilElementInvisible(driver, successMsg.get(0));
 		}
 		catch (Exception ex) 
 		{
-			System.out.println("Exception in method : changePassword "+ex.getMessage());
-			ex.printStackTrace();
+			ExtentReportHelper.logFail("Exception in method : changePassword "+ex.getMessage());
+			
 		}
 		
 	
