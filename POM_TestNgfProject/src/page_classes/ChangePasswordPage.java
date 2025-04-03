@@ -23,7 +23,7 @@ public class ChangePasswordPage
 	private final String textBoxPasswordByXpath = "//input[@name='password']";
 	private final String textBoxConfirmPasswordByXpath = "//input[@name='confirm_pass']";
 	private final String buttonUpdateByXpath = "//button[text()='Update']";
-	private final String successMsgByXpath = "//span[text()='Success!";
+	private final String successMsgByXpath = "//span[text()='Success!']";
 	
 	@FindBy(xpath = textBoxPasswordByXpath) // to locate the webelements from UI
 	private WebElement textBoxPassword;

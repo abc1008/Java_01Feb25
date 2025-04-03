@@ -1,73 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-02T08:59:44 IST" name="Default suite" finished-at="2025-04-02T08:59:59 IST" duration-ms="14361">
+  <suite started-at="2025-04-03T08:03:18 IST" name="Suite" finished-at="2025-04-03T08:03:30 IST" duration-ms="11665">
     <groups>
     </groups>
-    <test started-at="2025-04-02T08:59:44 IST" name="Default test" finished-at="2025-04-02T08:59:59 IST" duration-ms="14361">
+    <test started-at="2025-04-03T08:03:18 IST" name="Test" finished-at="2025-04-03T08:03:30 IST" duration-ms="11665">
       <class name="testSuites.ChangePasswordTestSuite">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testSuites.ChangePasswordTestSuite@65e98b1c]" started-at="2025-04-02T08:59:38 IST" name="launchBrowser" finished-at="2025-04-02T08:59:44 IST" duration-ms="6535" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testSuites.ChangePasswordTestSuite@61322f9d]" started-at="2025-04-03T08:03:16 IST" name="launchBrowser" finished-at="2025-04-03T08:03:18 IST" duration-ms="2841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testSuites.ChangePasswordTestSuite@65e98b1c]" started-at="2025-04-02T08:59:44 IST" name="login" finished-at="2025-04-02T08:59:47 IST" duration-ms="3168" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:testSuites.ChangePasswordTestSuite@61322f9d]" started-at="2025-04-03T08:03:19 IST" name="login" finished-at="2025-04-03T08:03:19 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="tc123_ChangePasswordTest()[pri:0, instance:testSuites.ChangePasswordTestSuite@65e98b1c]" started-at="2025-04-02T08:59:47 IST" name="tc123_ChangePasswordTest" finished-at="2025-04-02T08:59:57 IST" duration-ms="9335" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at testSuites.ChangePasswordTestSuite.tc123_ChangePasswordTest(ChangePasswordTestSuite.java:17)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="tc123_ChangePasswordTest()[pri:0, instance:testSuites.ChangePasswordTestSuite@61322f9d]" started-at="2025-04-03T08:03:19 IST" name="tc123_ChangePasswordTest" finished-at="2025-04-03T08:03:30 IST" duration-ms="11095" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc123_ChangePasswordTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:testSuites.ChangePasswordTestSuite@65e98b1c]" started-at="2025-04-02T08:59:57 IST" name="logout" finished-at="2025-04-02T08:59:59 IST" duration-ms="1805" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:testSuites.ChangePasswordTestSuite@61322f9d]" started-at="2025-04-03T08:03:30 IST" name="logout" finished-at="2025-04-03T08:03:30 IST" duration-ms="530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testSuites.ChangePasswordTestSuite@65e98b1c]" started-at="2025-04-02T08:59:59 IST" name="closeBrowser" finished-at="2025-04-02T09:00:00 IST" duration-ms="1544" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testSuites.ChangePasswordTestSuite@61322f9d]" started-at="2025-04-03T08:03:30 IST" name="closeBrowser" finished-at="2025-04-03T08:03:31 IST" duration-ms="826" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- testSuites.ChangePasswordTestSuite -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

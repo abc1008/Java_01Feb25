@@ -15,7 +15,6 @@ public class ChangePasswordTestSuite extends BaseClass
 	public void tc123_ChangePasswordTest() throws IOException
 	{
 		Assert.assertTrue(new ChangePasswordTestScript().performChangePassword());
-		
 	}
 	
 	

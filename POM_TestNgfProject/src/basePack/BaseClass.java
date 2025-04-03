@@ -41,10 +41,10 @@ public class BaseClass
 	@BeforeMethod
 	public void login() throws InterruptedException, IOException
 	{
-		ExtentReportHelper.createTest("TestCase1");
 		
-		LoginTestScripts loginTestScripts = new  LoginTestScripts();
-		loginTestScripts.performLogin();
+		
+//		LoginTestScripts loginTestScripts = new  LoginTestScripts();
+//		loginTestScripts.performLogin();
 		
 	}
 	
