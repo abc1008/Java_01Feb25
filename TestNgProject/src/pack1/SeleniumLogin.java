@@ -30,7 +30,7 @@ public class SeleniumLogin
 	@BeforeMethod
 	public void login()
 	{
-		WebElement email = driver.findElement(By.id("input-email"));
+		WebElement email = driver.findElement(By.id("input-emai"));
 		email.sendKeys("ag89111@gmail.com");
 		
 		driver.findElement(By.name("password")).sendKeys("Login@123");

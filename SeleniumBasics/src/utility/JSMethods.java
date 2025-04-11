@@ -16,4 +16,10 @@ public class JSMethods
 		js.executeScript("arguments[0].scrollIntoView();", ele);
 	}
 
+	
+	public static void click(WebDriver driver,WebElement ele )
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", ele);
+	}
 }
